@@ -2,16 +2,16 @@ local enabled = ui.checkbox("custom esp", true)
 local team = ui.checkbox("show teammates", false)
 
 local show_box = ui.checkbox("show box", true)
-local box_color = ui.color("box color", 230, 230, 230, 255)
+local box_color = ui.color("box color", 230, 230, 230, 255, show_box)
 
 local show_health = ui.checkbox("show health bar", true)
-local health_color = ui.color("health color", 125, 205, 144, 255)
+local health_color = ui.color("health color", 125, 205, 144, 255, show_health)
 
 local show_health_bg = ui.checkbox("health background", true)
-local health_bg_color = ui.color("background color", 20, 20, 20, 255)
+local health_bg_color = ui.color("background color", 20, 20, 20, 255, show_health_bg)
 
 local show_name = ui.checkbox("show name", true)
-local name_color = ui.color("name color", 230, 230, 230, 255)
+local name_color = ui.color("name color", 230, 230, 230, 255, show_name)
 
 local function update_ui()
     local active = enabled:get()
